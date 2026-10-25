@@ -56,7 +56,7 @@ export function Footer() {
               </div> */}
               <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
   <img
-    src="/payal logo2.PNG"
+    src="/payal logo.PNG"
     alt="Payal Arora Logo"
     className="w-full h-full object-contain"
   />
