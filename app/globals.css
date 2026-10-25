@@ -1,26 +1,169 @@
 @import "tailwindcss";
+@import "@mantine/core/styles.css";
+
+@theme {
+  --font-heading: var(--font-outfit), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-serif-accent), Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-ivory: #FAF8F5;
+  --color-charcoal: #24212A;
+  --color-lavender: #B8A4D8;
+  --color-lilac-soft: #EAE2F5;
+  --color-blush: #E8C7CB;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Premium Brand Color Palette */
+  --color-ivory: #FAF8F5;
+  --color-charcoal: #24212A;
+  --color-lavender: #B8A4D8;
+  --color-lilac-soft: #EAE2F5;
+  --color-blush: #E8C7CB;
+  --color-white: #FFFFFF;
+
+  /* UI Tokens */
+  --bg-primary: #FAF8F5;
+  --text-primary: #24212A;
+  --text-muted: #645E6E;
+  --text-subtle: #8A8496;
+  --border-subtle: rgba(36, 33, 42, 0.08);
+  --border-card: rgba(36, 33, 42, 0.06);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 248, 245, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-shadow: 0 10px 30px -10px rgba(36, 33, 42, 0.05);
+
+  --card-shadow: 0 10px 30px -10px rgba(36, 33, 42, 0.06);
+  --card-hover-shadow: 0 20px 40px -15px rgba(36, 33, 42, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-outfit), var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Explicit font family utilities for bulletproof styling */
+.font-heading {
+  font-family: var(--font-outfit), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: -0.025em;
+}
+
+.font-body {
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.font-serif-accent {
+  font-family: var(--font-serif-accent), Georgia, Cambria, "Times New Roman", Times, serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+p, span, a, button, input, textarea, div {
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-lavender);
+  color: var(--color-charcoal);
+}
+
+/* Glassmorphism card styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 36px rgba(36, 33, 42, 0.04);
+}
+
+.glass-nav {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(36, 33, 42, 0.06);
+}
+
+.glass-card-dark {
+  background: rgba(36, 33, 42, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Subtle decorative glow */
+.glow-lavender {
+  background: radial-gradient(circle, rgba(184, 164, 216, 0.28) 0%, rgba(234, 226, 245, 0.08) 60%, transparent 75%);
+}
+
+.glow-blush {
+  background: radial-gradient(circle, rgba(232, 199, 203, 0.35) 0%, rgba(250, 248, 245, 0) 70%);
+}
+
+/* Custom interactive button styles */
+.btn-primary {
+  background-color: var(--color-charcoal);
+  color: #FFFFFF;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary:hover {
+  background-color: #15131A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(36, 33, 42, 0.25);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--color-charcoal);
+  font-family: var(--font-plus-jakarta), sans-serif;
+  border: 1px solid rgba(36, 33, 42, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-secondary:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(36, 33, 42, 0.08);
+}
+
+/* Responsive container */
+.container-custom {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
