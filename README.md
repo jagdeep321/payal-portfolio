@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Payal Arora — Premium Digital Marketing Portfolio
 
-## Getting Started
+A bespoke, high-performance personal portfolio website built with Next.js (App Router), Mantine UI, Framer Motion, and Tailwind CSS for **Payal Arora**, Digital Marketer & Social Media Executive.
 
-First, run the development server:
+---
+
+## 🚀 Running the Project
+
+Navigate into the portfolio directory and start the development server:
 
 ```bash
+cd payal-portfolio
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To create an optimized production build:
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Design System & Palette
 
-To learn more about Next.js, take a look at the following resources:
+- **Warm Ivory / Off-White**: `#FAF8F5`
+- **Deep Charcoal**: `#24212A`
+- **Muted Lavender**: `#B8A4D8`
+- **Soft Lilac**: `#EAE2F5`
+- **Blush Accent**: `#E8C7CB`
+- **Pure White**: `#FFFFFF`
+- **Typography**: `Outfit` (Headings) and `Plus Jakarta Sans` (Body text)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ How to Customize
 
-## Deploy on Vercel
+All portfolio configuration, contact details, image URLs, and social media handles are centralized in a single file:
+**`payal-portfolio/data/portfolio.ts`**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Updating Payal's Instagram Profile
+In `data/portfolio.ts`, look for line 44:
+```ts
+export const INSTAGRAM_PROFILE_URL = "https://instagram.com/your_handle"; // <-- ENTER ACTUAL INSTAGRAM URL HERE
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2. Replacing the Hero Portrait
+In `data/portfolio.ts`, update `HERO_DATA.portraitImage`:
+```ts
+portraitImage: {
+  url: "/images/payal-portrait.jpg", // Place your photo in the public/ folder or use a cloud URL
+  alt: "Payal Arora — Digital Marketer",
+}
+```
+
+### 3. Replacing Project Images
+In `data/portfolio.ts`, update `PROJECTS_DATA`:
+- **BR Interiors**: Replace the two kitchen interior images under `br-interiors.images`.
+- **Graphics Design**: Replace the two cafe branding images under `graphics-design.images`.
+- **The Outfit Store**: Replace the apparel visuals under `the-outfit-store.images`.
+
+---
+
+## 📁 Project Architecture
+
+```
+payal-portfolio/
+├── app/
+│   ├── globals.css           # Design tokens, glassmorphism, and responsive utilities
+│   ├── layout.tsx            # MantineProvider, ColorSchemeScript, fonts, and SEO metadata
+│   └── page.tsx              # Assembles all 5 main sections, navbar, and footer
+├── components/
+│   ├── Navbar.tsx            # Sticky glassmorphism navbar with active state & mobile drawer
+│   ├── HeroSection.tsx       # Striking editorial hero with Framer Motion & WhatsApp CTA
+│   ├── AboutSection.tsx      # About bio, approach highlight, and education cards
+│   ├── ServicesSection.tsx   # 6 responsive service cards with hover lift & icon animation
+│   ├── ProjectsSection.tsx   # 3 distinct showcases (BR Interiors, Cafe, The Outfit Store)
+│   ├── ContactSection.tsx    # Dark charcoal editorial contact card with Call, WA, Email
+│   ├── Footer.tsx            # Monogram, links, dynamic copyright, social icons
+│   ├── BackToTop.tsx         # Floating scroll-to-top button
+│   └── ImageWithFallback.tsx # Next.js Image wrapper with skeleton loader and error fallback
+├── data/
+│   └── portfolio.ts          # Central source of truth for text, links, and imagery
+├── theme.ts                  # Mantine UI custom color & typography theme configuration
+└── next.config.ts            # Image host domains & Next.js config
+```
