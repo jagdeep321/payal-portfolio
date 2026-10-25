@@ -84,29 +84,22 @@ export function Navbar() {
             className="group flex items-center gap-3 select-none outline-none focus-visible:ring-2 focus-visible:ring-[#B8A4D8] rounded-xl"
             aria-label="Payal Arora - Back to Home"
           >
-            {/* <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#24212A] to-[#39324B] flex items-center justify-center text-white shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[#B8A4D8]/20">
+            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#24212A] to-[#39324B] flex items-center justify-center text-white shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[#B8A4D8]/20">
               <span className="font-heading font-extrabold text-sm tracking-widest text-[#FAF8F5]">
                 PA
               </span>
-              <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#B8A4D8] border-2 border-[#FAF8F5]" />
-            </div> */}
+              {/* <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#B8A4D8] border-2 border-[#FAF8F5]" /> */}
+            </div>
             
-{/* <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-  <img
-    src="/payal logo2.PNG"
-    alt="Payal Arora Logo"
-    className="w-full h-full object-contain"
-  />
-  <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#B8A4D8] border-2 border-[#FAF8F5]" />
-</div> */}
 
+{/* 
 <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
   <img
     src="/payal logo2.PNG"
     alt="Payal Arora Logo"
     className="w-full h-full object-contain"
   />
-</div>
+</div> */}
 
 
             <div className="flex flex-col">

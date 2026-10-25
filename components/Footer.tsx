@@ -49,18 +49,18 @@ export function Footer() {
               className="group flex items-center gap-3 select-none"
               aria-label="Payal Arora - Back to Top"
             >
-              {/* <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#24212A] to-[#39324B] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#24212A] to-[#39324B] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
                 <span className="font-heading font-extrabold text-sm tracking-widest text-[#FAF8F5]">
                   PA
                 </span>
-              </div> */}
-              <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              </div>
+              {/* <div className="relative w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
   <img
     src="/payal logo2.PNG"
     alt="Payal Arora Logo"
     className="w-full h-full object-contain"
   />
-</div>
+</div> */}
               <div className="flex flex-col text-left">
                 <span className="font-heading font-bold text-lg text-[#24212A] tracking-tight">
                   Payal Arora
