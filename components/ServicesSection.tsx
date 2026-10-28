@@ -44,13 +44,19 @@ export function ServicesSection() {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 35, rotateX: 8 },
+    hidden: (index: number) => ({
+      opacity: 0,
+      x: index % 2 === 0 ? -60 : 60,
+      y: 20,
+      rotateY: index % 2 === 0 ? -10 : 10,
+    }),
     visible: {
       opacity: 1,
+      x: 0,
       y: 0,
-      rotateX: 0,
+      rotateY: 0,
       transition: {
-        duration: 0.65,
+        duration: 0.75,
         ease: "easeOut" as const,
       },
     },
@@ -109,7 +115,7 @@ export function ServicesSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {SERVICES_DATA.map((service, index) => (
-            <motion.div key={service.id} variants={cardVariants} className="h-full">
+            <motion.div key={service.id} custom={index} variants={cardVariants} className="h-full">
               <Card3D intensity={12} depth={22} scaleOnHover={1.03} className="h-full">
                 <div className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-9 border border-[#24212A]/6 shadow-[0_8px_24px_-10px_rgba(36,33,42,0.05)] hover:shadow-[0_24px_48px_-15px_rgba(36,33,42,0.14)] hover:border-[#B8A4D8]/40 transition-all duration-300 flex flex-col justify-between h-full">
                   <div>

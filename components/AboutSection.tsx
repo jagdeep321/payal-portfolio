@@ -51,12 +51,12 @@ export function AboutSection() {
 
         {/* Two-Column Modern Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Introduction & My Approach with 3D Tilt */}
+          {/* Left Column: Introduction & My Approach with 3D Entrance from LEFT */}
           <motion.div
-            initial={{ opacity: 0, y: 35, rotateX: 6 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={{ opacity: 0, x: -60, rotateY: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.65 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
             className="lg:col-span-7 flex flex-col gap-8"
           >
             {/* Introduction Card */}
@@ -95,12 +95,12 @@ export function AboutSection() {
             </Card3D>
           </motion.div>
 
-          {/* Right Column: Education & Training Cards */}
+          {/* Right Column: Education & Training Cards from RIGHT */}
           <motion.div
-            initial={{ opacity: 0, y: 35, rotateX: 6 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={{ opacity: 0, x: 60, rotateY: 8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.65, delay: 0.15 }}
+            transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
             className="lg:col-span-5 flex flex-col gap-6"
           >
             <div className="px-2">

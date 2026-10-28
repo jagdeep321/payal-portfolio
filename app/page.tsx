@@ -10,11 +10,11 @@ import { BackToTop } from "../components/BackToTop";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#FAF8F5] text-[#24212A] selection:bg-[#B8A4D8] selection:text-[#24212A]">
+    <div className="relative min-h-screen bg-[#FAF8F5] text-[#24212A] selection:bg-[#B8A4D8] selection:text-[#24212A] overflow-x-hidden">
       {/* Sticky Premium Navbar */}
       <Navbar />
 
-      <main>
+      <main className="overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection />
 

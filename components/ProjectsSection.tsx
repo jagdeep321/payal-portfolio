@@ -60,13 +60,13 @@ export function ProjectsSection() {
         <div className="flex flex-col gap-20 lg:gap-28">
 
           {/* ===============================================================
-              PROJECT 1: BR Interiors (Interior Design & Modular Kitchens)
+              PROJECT 1: BR Interiors (from LEFT)
               =============================================================== */}
           <motion.article
-            initial={{ opacity: 0, y: 45, rotateX: 6 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={{ opacity: 0, x: -70, rotateY: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-[#24212A]/6 shadow-[0_12px_40px_-15px_rgba(36,33,42,0.06)] hover:shadow-[0_25px_50px_-15px_rgba(36,33,42,0.1)] transition-shadow duration-300"
           >
             {/* Top Row: Meta & Header */}
@@ -127,7 +127,7 @@ export function ProjectsSection() {
                         alt={img.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className="object-contain transition-transform duration-700 ease-out group-hover:scale-108"
                         containerClassName="w-full h-full"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#24212A]/80 via-[#24212A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
@@ -152,13 +152,13 @@ export function ProjectsSection() {
 
 
           {/* ===============================================================
-              PROJECT 2: Graphics Design (Cafe Branding & Promotional Graphics)
+              PROJECT 2: Graphics Design (from RIGHT)
               =============================================================== */}
           <motion.article
-            initial={{ opacity: 0, y: 45, rotateX: 6 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={{ opacity: 0, x: 70, rotateY: 8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-[#24212A]/6 shadow-[0_12px_40px_-15px_rgba(36,33,42,0.06)] hover:shadow-[0_25px_50px_-15px_rgba(36,33,42,0.1)] transition-shadow duration-300"
           >
             {/* Header */}
@@ -217,7 +217,7 @@ export function ProjectsSection() {
                         alt={img.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className="object-contain transition-transform duration-700 ease-out group-hover:scale-108"
                         containerClassName="w-full h-full"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#24212A]/80 via-[#24212A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
@@ -242,13 +242,13 @@ export function ProjectsSection() {
 
 
           {/* ===============================================================
-              PROJECT 3: Clothing Brand: The Outfit Store
+              PROJECT 3: Clothing Brand: The Outfit Store (from LEFT)
               =============================================================== */}
           <motion.article
-            initial={{ opacity: 0, y: 45, rotateX: 6 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={{ opacity: 0, x: -70, rotateY: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-[#24212A]/6 shadow-[0_12px_40px_-15px_rgba(36,33,42,0.06)] hover:shadow-[0_25px_50px_-15px_rgba(36,33,42,0.1)] transition-shadow duration-300"
           >
             {/* Header */}

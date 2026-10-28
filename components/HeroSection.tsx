@@ -61,11 +61,11 @@ export function HeroSection() {
 
       <div className="container-custom relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Essential Hero Information with 3D Entrance */}
+          {/* Left Column: Essential Hero Information with 3D Entrance from LEFT */}
           <motion.div
-            initial={{ opacity: 0, y: 35, rotateX: 10 }}
-            animate={{ opacity: 1, y: 0, rotateX: 0 }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -70, rotateY: -10 }}
+            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
             className="lg:col-span-7 flex flex-col justify-center text-left"
           >
             {/* Profession Accent Badge with Soft Pulse */}
@@ -139,11 +139,11 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Editorial Portrait with Interactive 3D Card Tilt */}
+          {/* Right Column: Editorial Portrait with Interactive 3D Card Tilt from RIGHT */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.25, ease: "easeOut" }}
+            initial={{ opacity: 0, x: 70, rotateY: 10, scale: 0.92 }}
+            animate={{ opacity: 1, x: 0, rotateY: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
             <div className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[460px]">

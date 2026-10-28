@@ -52,8 +52,14 @@ export function ContactSection() {
           />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Content */}
-            <div className="lg:col-span-7">
+            {/* Left Content from LEFT */}
+            <motion.div
+              initial={{ opacity: 0, x: -60, rotateY: -6 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:col-span-7"
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -116,10 +122,16 @@ export function ContactSection() {
                   </div>
                 </motion.a>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Right Action Panel: 3 Functional CTA Buttons & Social Icons with 3D Tilt */}
-            <div className="lg:col-span-5">
+            {/* Right Action Panel from RIGHT with 3D Tilt */}
+            <motion.div
+              initial={{ opacity: 0, x: 60, rotateY: 6 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+              className="lg:col-span-5"
+            >
               <Card3D intensity={8} depth={15} scaleOnHover={1.015}>
                 <div className="flex flex-col gap-4 bg-white/5 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl">
                   <h3 className="text-lg font-bold text-white font-heading mb-2">
@@ -210,7 +222,7 @@ export function ContactSection() {
                   </div>
                 </div>
               </Card3D>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
