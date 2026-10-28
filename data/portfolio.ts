@@ -209,7 +209,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "graphics-design",
-    title: "Graphics Design",
+    title: "Cafe : Apna Chai Wala",
     badge: "Cafe Branding & Visual Identity",
     context: "Cafe branding and promotional graphics.",
     scope:
